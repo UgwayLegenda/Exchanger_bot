@@ -45,6 +45,9 @@ class ExchangeRateAPI:
         if to_currency not in rates:
             logger.error(f"Неподдерживаемая валюта: {to_currency}")
             raise ValueError(f"Валюта {to_currency} не поддерживается")
+        if not isinstance(rates[to_currency], (int, float)):
+            logger.error(f"Некорректное значение для {to_currency}: {rates[to_currency]}")
+            raise ValueError(f"Значение для {to_currency} не является числом")
         result = amount * rates[to_currency]
         logger.info(f"Конвертировано {amount} {from_currency} в {result:.2f} {to_currency}")
         return result
