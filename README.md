@@ -25,23 +25,36 @@ Exchanger_Bot - максимально простой в своем исполн
 │   ├── duration.py
 |   ├── release_year.py
 │   └── lyrics.py
-├── data                    <- Все используемые и полученные данные
-│   ├── lyrics_all.csv
-│   ├── lyr_dur_sec1.csv
-│   └── final_lyrics.csv
-├── dashboard <- Проект, переведенный формат дэшборда
-│   ├── pages                   <- Все страницы для дэшборда      
-│   │   ├── 1_data.py
-│   │   ├── 2_EDA.py
-│   │   ├── 3_analysis.py
-│   │   └── 4_conclusion.py
-│   ├── data                    <- Все используемые и полученные данные для дэшборда
-│   │   ├── final_lyrics.csv
-│   │   ├── lyrics_for_analysis1.csv
-│   │   └── pos_analysis1.csv
-│   ├── requirements.txt        <- Все зависимости для запуска проекта. 
-│   ├── main_page.py  
+├── config                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── settings.py
+├── filters                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── filters.py 
+├── keyboards                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── keyboards.py 
+├── middlewares                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── middleware.py
+├── routers                    <- Все используемые и полученные данные
+│   ├── handlers                   <- Все страницы для дэшборда      
+│   │   ├── fsm.py
+│   │   ├── commands.py  
+│   │   └── __init__.py
+│   ├── __init__.py
+│   └── commands.py  
+├── services                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── api_client.py
+├── storage                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── storage.py 
+├── utils                    <- Все используемые и полученные данные
+│   ├── __init__.py
+│   └── logger.py  
 ├── .env  <- Конфиг с ключами для бота и api **[Не залит на github]**
-│  
+├──   requirements.txt        <- Все зависимости для запуска проекта. 
+├──   bot.py        <- Центральный файл.
 └── .gitignore
 </pre>
